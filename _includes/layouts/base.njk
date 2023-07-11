@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="bg-zinc-950 min-h-screen flex flex-col text-white py-7 mx-auto px-6 sm:px-8 lg:px-11  max-w-[73.5rem]">
+    {% include 'partials/_header.njk' %}
+    {{content | safe}}
+    {% include 'partials/_footer.html' %}
+    
+</body>
+</html>

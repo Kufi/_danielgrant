@@ -1,0 +1,41 @@
+---
+layout: 'layouts/subpage.njk'
+url: 'music'
+---
+
+{% import 'macros/artist-macro.njk' as macro %}
+
+{% set pluieTags = [
+    {title: "Spotify", url: "https://open.spotify.com/artist/45B0eXysoBg7vSontnZMeO?utm_medium=share&utm_source=linktree"},
+    {title: "Apple Music", url: "https://music.apple.com/us/album/mom/1675180759?i=1675180760"},
+    {title: "Instagram", url: "https://www.instagram.com/wepluie/"}
+]%}
+
+{% set kufisTags = [
+    {title: "Spotify", url: "https://open.spotify.com/album/7iSjxkhX8RRyQ75sniXjWC?referral=labelaffiliate&utm_source=1101lwVwqnQc&utm_medium=Indie_Distrokid&utm_campaign=labelaffiliate"},
+    {title: "Apple Music", url: "https://music.apple.com/us/album/tired-single/1672257284"},
+    {title: "Instagram", url: "https://www.instagram.com/kufis_/"}
+]%}
+
+{% set honeyTags = [
+    {title: "Spotify", url: "https://open.spotify.com/album/4cyUj1dJ7d39D9hgCEc8UC"},
+    {title: "Apple Music", url: "https://music.apple.com/gb/album/honey-single/1450406008"},
+    {title: "YouTube", url: "https://www.youtube.com/watch?v=Rx6kDRo-c4U"}
+]%}
+
+{% set silfoTags = [
+    {title: "SoundCloud", url: "https://soundcloud.com/silfobeats"}
+]%}
+
+
+
+<div class="flex flex-col mt-5 ">
+    {{ macro.artist("../assets/pluie.png", "Pluie", "An alternative rock band formed in 2022 by Gonzalo Chun and Oliver Lee, later joined by Byron Hansen and myself. I currently play bass for Pluie and help with mixing and recording.", pluieTags) }}
+
+    {{ macro.artist("../assets/kufis.jpeg", "Kufis", "A solo project focused acoustic-electronic sounds inspired by the likes of Mid-Air Theif and Sweet Trip. My best ever work as of writing this, performed, recorded, and mixed by myself.", kufisTags) }}
+
+    {{ macro.artist("../assets/honey.jpeg", "Honey - Elevator Talk", "A track I worked on with the bedroom pop group elevator talk. This was the group's debut track which now has over half a million streams on spotify. I did all the instrumentation for this track and helped with production.", honeyTags) }}
+
+    {{ macro.artist("../assets/silfobeats.jpeg", "Silfobeats", "Originially my soundcloud page for posting lofi hip hop beats I would make during my early years of music making, it is now the home to all sorts of random throw-away tracks which would never be online otherwise. Silfobeats has over 100,000 streams over all.", silfoTags) }}
+
+</div>

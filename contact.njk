@@ -1,0 +1,50 @@
+---
+layout: 'layouts/base.njk'
+url: 'contact'
+---
+
+<div class="flex flex-col grow p-0 sm:p-11 ml-15 justify-center items-center sm:items-start mb-14 sm:mb0">
+    <h1 class="text-accent font-semibold text-6xl sm:text-8xl max-w-2xl h-48 text-center sm:text-start">
+        Send me an Email.
+    </h1>
+    
+    <div class="group sm:self-end  flex flex-col-reverse items-center mt-0 sm:mt-0 relative">
+        <button id="mailButton" class="w-auto text-4xl sm:text-6xl bg-zinc-900 p-3 rounded-xl active:bg-zinc-800">
+            dkgrant@scu.edu
+        </button>
+        
+        
+        <span id="tooltip" class="bg-accent px-2 py-[2px] text-lg text-gray-100 rounded-md opacity-0 transition m-4 mx-auto">Copy to Clipboard</span>
+        <div id="tail" class="w-16 overflow-hidden inline-block absolute -translate-y-[72.1px] sm:-translate-y-[84.1px] translate-x-[20px] opacity-0 transition">
+            <div class=" h-4 w-11 bg-accent -rotate-45 transform origin-top-left"></div>
+            </div>
+               
+        
+    </div>
+</div>
+
+<script>
+    let mailButton = document.querySelector('#mailButton');
+    let tooltip = document.querySelector('#tooltip')
+    let tail = document.querySelector('#tail')
+
+    mailButton.addEventListener('click', function() {
+        navigator.clipboard.writeText("dkgrant@scu.edu")
+        tooltip.innerHTML = "Copied!"
+    })
+
+    mailButton.addEventListener('mouseleave', function() {
+        tooltip.classList.remove("opacity-100")
+        tail.classList.remove("opacity-100")
+        setTimeout( function() {
+            tooltip.innerHTML = "Copy to Clipboard"
+        }, 100)
+        
+    })
+
+    mailButton.addEventListener('mouseenter', function() {
+        tooltip.classList.add("opacity-100")
+        tail.classList.add("opacity-100")
+
+    })
+</script>

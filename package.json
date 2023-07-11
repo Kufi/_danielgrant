@@ -1,0 +1,22 @@
+{
+  "name": "11tytw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./tailwind.css -o ./_site/css/styles.css --watch",
+    "prop": "npx tailwindcss -i ./tailwind.css -o ./_site/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "typeit": "^8.7.1"
+  }
+}

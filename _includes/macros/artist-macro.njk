@@ -1,0 +1,26 @@
+{% macro artist(imgSrc, title, desc, tags) %}
+
+    <div class="flex flex-col sm:flex-row text-grey p-2 hover:outline my-3">
+        <div class="flex items-center px-5 py-3 sm:p-0 sm:hidden">
+            <h1 class="text-3xl w-full object-cover text-white font-semibold pr-2">
+                {{title}}
+            </h1>
+            <img class="self-center h-36" src={{imgSrc}} alt="">
+        </div>
+        <img class="self-center hidden sm:block sm:h-44 md:h-52" src={{imgSrc}} alt="">
+        <div class="flex flex-col justify-between px-5 text-white">
+            <h1 class="text-4xl hidden sm:block font-semibold py-2">
+                {{title}}
+            </h1>
+            <p class="text-grey text-start pt-3 sm:p-0">
+                {{desc}}
+            </p>
+            <div class="pt-6 sm:py-3 self-end sm:self-start">
+                {% for tag in tags %}
+                <a class=" ml-4 mr-0 sm:ml-0 sm:mr-4 hover:underline hover:text-accent" target="_blank" href={{tag.url}} >{{tag.title}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}
