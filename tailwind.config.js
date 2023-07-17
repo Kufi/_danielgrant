@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./_site/**/*.{html,njk}"],
-  theme: {
-    extend: {},
-  },
   plugins: [],
   theme: {
     extend: {
+      screens: {
+        'tiny': '350px',
+      },
       colors: {
         current: '682AE9',
         accent: '682AE9',
@@ -49,6 +49,7 @@ module.exports = {
   },
   {
     pattern: /(w|h)-[0-9]+/
-  }]
+  }
+  ]
 }
 
