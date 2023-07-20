@@ -20268,12 +20268,8 @@ video {
   padding-top: 24rem;
 }
 
-.pt-\[6px\] {
-  padding-top: 6px;
-}
-
-.pt-\[5px\] {
-  padding-top: 5px;
+.pt-\[2px\] {
+  padding-top: 2px;
 }
 
 .text-center {
@@ -27783,6 +27779,11 @@ video {
     padding-right: 0.5rem;
   }
 
+  .sm\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -27791,11 +27792,6 @@ video {
   .sm\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-
-  .sm\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .sm\:text-start {

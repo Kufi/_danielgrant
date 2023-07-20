@@ -44,6 +44,11 @@
 
 new TypeIt("#string", {
   strings: ["Hello, I'm <span style='color:#682AE9'>_daniel</span>. Nice to meet you."],
+  afterComplete:function(e){
+    setTimeout(function() {
+      e.destroy()
+    },3000)
+  }
 }).go();
   
 </script>
